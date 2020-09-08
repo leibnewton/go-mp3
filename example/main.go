@@ -22,9 +22,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/hajimehoshi/oto"
+	"github.com/leibnewton/oto"
 
-	"github.com/hajimehoshi/go-mp3"
+	"github.com/leibnewton/go-mp3"
 )
 
 func run() error {
@@ -39,7 +39,7 @@ func run() error {
 		return err
 	}
 
-	c, err := oto.NewContext(d.SampleRate(), 2, 2, 8192)
+	c, err := oto.NewContext(-1, d.SampleRate(), 2, 2, 8192)
 	if err != nil {
 		return err
 	}
